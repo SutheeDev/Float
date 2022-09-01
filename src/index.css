@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .letters {
+  min-height: 25rem;
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+body .letters .letter {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+body .letters .letter h1 {
+  height: 100%;
+  font-family: "Recursive", sans-serif;
+  text-transform: uppercase;
+  font-size: 20rem;
+  line-height: 0.1;
+}
+body .letters .letter .top {
+  color: wheat;
+}
+body .letters .letter .ly1 {
+  color: red;
+  position: relative;
+  z-index: -1;
+  transform: translate(7px, -15px);
+}
+body .letters .letter .ly2 {
+  color: blue;
+  position: relative;
+  z-index: -2;
+  transform: translate(14px, -30px);
+}
+body .letters .letter .ly3 {
+  color: aqua;
+  position: relative;
+  z-index: -3;
+  transform: translate(21px, -45px);
+}
+body .letters .letter .ly4 {
+  color: teal;
+  position: relative;
+  z-index: -4;
+  transform: translate(28px, -60px);
+}/*# sourceMappingURL=index.css.map */
