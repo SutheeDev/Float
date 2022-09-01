@@ -3,7 +3,7 @@ import React from 'react'
 const Float = () => {
     return (
         <>
-        <main>
+        <main className='noise'>
             <article className='letters'>
                 <section className="letter">
                     <h1 className='top'>f</h1>

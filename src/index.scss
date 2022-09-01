@@ -15,51 +15,67 @@ body {
             height: 100vh;
             display: flex;
             align-items: center;
+            filter: contrast(110%);
+            background-color: #b199ff;
+            background-image:
+                radial-gradient(at 68% 22%, hsla(209, 95%, 64%, 1) 0px, transparent 50%),
+                radial-gradient(at 23% 57%, hsla(180, 65%, 62%, 1) 0px, transparent 50%),
+                radial-gradient(at 4% 54%, hsla(295, 73%, 75%, 1) 0px, transparent 50%),
+                radial-gradient(at 48% 90%, hsla(260, 85%, 73%, 1) 0px, transparent 50%),
+                radial-gradient(at 71% 31%, hsla(139, 64%, 77%, 1) 0px, transparent 50%), 
+                url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4.12' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+                position: relative;
+                z-index: -10;
             .letters {
                 min-height: 25rem;
                 width: 100vw;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                
                 .letter {
                     h1 {
                         font-family: 'Recursive', sans-serif;
                         text-transform: uppercase;
                         font-size: 20rem;
                         line-height: 0.1;
+                        text-shadow: 4px 3px 8px rgba(0, 0, 0, 0.2);
+                        // text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+                        // -webkit-font-smoothing: antialiased;
                     }
                     .top {
-                        color: wheat;
+                        color: #C4FFB2;
                     }
                     .ly1 {
-                        color: red;
+                        color: #B7E3CC;
                         position: relative;
                         z-index: -1;
-                        transform: translate(7px, -15px);
+                        transform: translate(9px, -8px);
                     }
                     .ly2 {
-                        color: blue;
+                        color: #EB5160;
                         position: relative;
                         z-index: -2;
-                        transform: translate(14px, -30px);
+                        transform: translate(18px, -16px);
                     }
                     .ly3 {
-                        color: aqua;
+                        color: #7D82B8;
                         position: relative;
                         z-index: -3;
-                        transform: translate(21px, -45px);
+                        transform: translate(27px, -24px);
                     }
                     .ly4 {
-                        color: teal;
+                        color: #7B4B94;
                         position: relative;
                         z-index: -4;
-                        transform: translate(28px, -60px);
+                        transform: translate(36px, -32px);
                     }
                     .bottom {
-                        color: rgba(0, 0, 0, 0.145);
+                        color: rgba(0, 0, 0, 0.1);
                         position: relative;
                         z-index: -5;
-                        transform: translate(35px, -75px);
+                        transform: translate(45px, -40px);
+                        text-shadow: none;
                     }
                 }
             }
