@@ -3,9 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-@mixin letter($x, $y) {
+@mixin letter($x) {
     position: relative;
-    transform: translate($x, $y)
+    transform: translateX($x)
 }
 body {
     width: 100vw;
@@ -32,11 +32,13 @@ body {
                 position: relative;
                 z-index: -10;
             .letters {
-                min-height: 25rem;
+                min-height: 7rem;
                 width: 100vw;
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
                 justify-content: center;
+                position: relative;
+                transform: translateX(-2rem);
                 .letter {
                     display: grid;
                     place-items: center;
@@ -58,6 +60,7 @@ body {
                     @media only screen and (max-width: 600px) {
                         h1 {
                             font-size: clamp(1rem, 7vw + 5rem, 7rem);
+                            text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
                         }
                     }
                     @media only screen and (max-width: 400px) {
@@ -69,32 +72,32 @@ body {
                         color: #C4FFB2;
                     }
                     .ly1 {
-                        // @include letter(14px, -32px);
-                        position: relative;
+                        @include letter(14px);
+                        // position: relative;
                         color: #B7E3CC;
                         z-index: -1;
                     }
                     .ly2 {
-                        // @include letter(29px, -64px);
-                        position: relative;
+                        @include letter(28px);
+                        // position: relative;
                         color: #EB5160;
                         z-index: -2;
                     }
                     .ly3 {
-                        // @include letter(44px, -96px);
-                        position: relative;
+                        @include letter(42px);
+                        // position: relative;
                         color: #7D82B8;
                         z-index: -3;
                     }
                     .ly4 {
-                        // @include letter(56px, -128px);
-                        position: relative;
+                        @include letter(56px);
+                        // position: relative;
                         color: #7B4B94;
                         z-index: -4;
                     }
                     .bottom {
-                        // @include letter(70px, -160px);
-                        position: relative;
+                        @include letter(70px);
+                        // position: relative;
                         color: rgba(0, 0, 0, 0.1);
                         z-index: -5;
                         text-shadow: none;

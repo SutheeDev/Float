@@ -26,11 +26,13 @@ body #root main {
   z-index: -10;
 }
 body #root main .letters {
-  min-height: 25rem;
+  min-height: 7rem;
   width: 100vw;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  position: relative;
+  transform: translateX(-2rem);
 }
 body #root main .letters .letter {
   display: grid;
@@ -53,6 +55,7 @@ body #root main .letters .letter h1 {
 @media only screen and (max-width: 600px) {
   body #root main .letters .letter h1 {
     font-size: clamp(1rem, 7vw + 5rem, 7rem);
+    text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -65,26 +68,31 @@ body #root main .letters .letter .top {
 }
 body #root main .letters .letter .ly1 {
   position: relative;
+  transform: translateX(14px);
   color: #B7E3CC;
   z-index: -1;
 }
 body #root main .letters .letter .ly2 {
   position: relative;
+  transform: translateX(28px);
   color: #EB5160;
   z-index: -2;
 }
 body #root main .letters .letter .ly3 {
   position: relative;
+  transform: translateX(42px);
   color: #7D82B8;
   z-index: -3;
 }
 body #root main .letters .letter .ly4 {
   position: relative;
+  transform: translateX(56px);
   color: #7B4B94;
   z-index: -4;
 }
 body #root main .letters .letter .bottom {
   position: relative;
+  transform: translateX(70px);
   color: rgba(0, 0, 0, 0.1);
   z-index: -5;
   text-shadow: none;

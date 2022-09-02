@@ -30,85 +30,48 @@ const Letter = (props) => {
             var tl = gsap.timeline();
             tl.to(el, {
                 y: 100,
-                x: -21,
                 duration: 1.6,
                 repeat: -1,
                 yoyo: true,
                 ease: "power2.inOut"
             })
         };
-        var topTl = gsap.timeline();
-        topTl.add(letterTimeline(top))
+        const topTl = () => {
+            var topTl = gsap.timeline();
+            topTl.add(letterTimeline(top))
+        }
+        const ly1Tl = () => {
+            var ly1Tl = gsap.timeline();
+            ly1Tl.add(letterTimeline(ly1))
+        }
 
-        var ly1Tl = gsap.timeline();
-        ly1Tl.add(letterTimeline(ly1))
+        const ly2Tl = () => {
+            var ly2Tl = gsap.timeline();
+            ly2Tl.add(letterTimeline(ly2))
+        }
 
-        var ly2Tl = gsap.timeline();
-        ly2Tl.add(letterTimeline(ly2))
+        const ly3Tl = () => {
+            var ly3Tl = gsap.timeline();
+            ly3Tl.add(letterTimeline(ly3))
+        }
 
-        var ly3Tl = gsap.timeline();
-        ly3Tl.add(letterTimeline(ly3))
+        const ly4Tl = () => {
+            var ly4Tl = gsap.timeline();
+            ly4Tl.add(letterTimeline(ly4))
+        }
 
-        var ly4Tl = gsap.timeline();
-        ly4Tl.add(letterTimeline(ly4))
-
-        var bottomTl = gsap.timeline();
-        bottomTl.add(letterTimeline(bottom))
+        const bottomTl = () => {
+            var bottomTl = gsap.timeline();
+            bottomTl.add(letterTimeline(bottom))
+        }
         
         var masterTl = gsap.timeline();
         masterTl.add(topTl)
-                .add(ly1Tl, '<1')
-
-
-        // var tl = gsap.timeline();
-        // tl.to(top, {
-        //     y: 100,
-        //     x: -21,
-        //     duration: 1.6,
-        //     repeat: -1,
-        //     yoyo: true,
-        //     ease: "power2.inOut"
-        // })
-    //     tl.to(ly1, {
-    //         y: 69,
-    //         x: -6,
-    //         duration: 1.6,
-    //         repeat: -1,
-    //         yoyo: true,
-    //         ease: "power2.inOut"
-    //     }, '<0.15')
-    //     tl.to(ly2, {
-    //         y: 38,
-    //         x: 12,
-    //         duration: 1.6,
-    //         repeat: -1,
-    //         yoyo: true,
-    //         ease: "power2.inOut"
-    //     }, '<0.15')
-    //     tl.to(ly3, {
-    //         y: 7,
-    //         x: 28,
-    //         duration: 1.6,
-    //         repeat: -1,
-    //         yoyo: true,
-    //         ease: "power2.inOut"
-    //     }, '<0.15')
-    //     tl.to(ly4, {
-    //         y: -24,
-    //         x: 43,
-    //         duration: 1.6,
-    //         repeat: -1,
-    //         yoyo: true,
-    //         ease: "power2.inOut"
-    //     }, '<0.15')
-    //     tl.to(bottom, {
-    //         y: -55,
-    //         x: 58,
-    //         duration: 1.6,
-    //         repeat: -1,
-    //         yoyo: true,
-    //         ease: "power2.inOut"
-    //     }, '<0.15')
+                .add(ly1Tl, '<0.2')
+                .add(ly2Tl, '<0.2')
+                .add(ly3Tl, '<0.2')
+                .add(ly4Tl, '<0.2')
+                .add(bottomTl, '<0.2')
     }, []);
 
     return (
