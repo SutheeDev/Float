@@ -16,6 +16,7 @@ body #root {
 body #root main {
   width: 100vw;
   height: 100vh;
+  padding: 3rem;
   display: flex;
   align-items: center;
   filter: contrast(110%);
@@ -31,45 +32,60 @@ body #root main .letters {
   align-items: center;
   justify-content: center;
 }
+body #root main .letters .letter {
+  display: grid;
+  place-items: center;
+}
 body #root main .letters .letter h1 {
   font-family: "Recursive", sans-serif;
   text-transform: uppercase;
-  font-size: 20rem;
+  font-size: clamp(1rem, 15vw + 5rem, 20rem);
   line-height: 0.1;
   text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
   -webkit-font-smoothing: antialiased;
+  grid-area: 1/1;
+}
+@media only screen and (max-width: 800px) {
+  body #root main .letters .letter h1 {
+    font-size: clamp(1rem, 12vw + 5rem, 11rem);
+  }
+}
+@media only screen and (max-width: 600px) {
+  body #root main .letters .letter h1 {
+    font-size: clamp(1rem, 7vw + 5rem, 7rem);
+  }
+}
+@media only screen and (max-width: 400px) {
+  body #root main .letters .letter h1 {
+    font-size: 4rem;
+  }
 }
 body #root main .letters .letter .top {
   color: #C4FFB2;
 }
 body #root main .letters .letter .ly1 {
-  color: #B7E3CC;
   position: relative;
+  color: #B7E3CC;
   z-index: -1;
-  transform: translate(14px, -32px);
 }
 body #root main .letters .letter .ly2 {
-  color: #EB5160;
   position: relative;
+  color: #EB5160;
   z-index: -2;
-  transform: translate(29px, -64px);
 }
 body #root main .letters .letter .ly3 {
-  color: #7D82B8;
   position: relative;
+  color: #7D82B8;
   z-index: -3;
-  transform: translate(44px, -96px);
 }
 body #root main .letters .letter .ly4 {
-  color: #7B4B94;
   position: relative;
+  color: #7B4B94;
   z-index: -4;
-  transform: translate(56px, -128px);
 }
 body #root main .letters .letter .bottom {
-  color: rgba(0, 0, 0, 0.1);
   position: relative;
+  color: rgba(0, 0, 0, 0.1);
   z-index: -5;
-  transform: translate(70px, -160px);
   text-shadow: none;
 }/*# sourceMappingURL=index.css.map */

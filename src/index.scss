@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+@mixin letter($x, $y) {
+    position: relative;
+    transform: translate($x, $y)
+}
 body {
     width: 100vw;
     height: 100vh;
@@ -13,6 +17,7 @@ body {
         main {
             width: 100vw;
             height: 100vh;
+            padding: 3rem;
             display: flex;
             align-items: center;
             filter: contrast(110%);
@@ -32,58 +37,85 @@ body {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                
                 .letter {
+                    display: grid;
+                    place-items: center;
                     h1 {
                         font-family: 'Recursive', sans-serif;
                         text-transform: uppercase;
-                        font-size: 20rem;
+                        font-size: clamp(1rem, 15vw + 5rem, 20rem);
                         line-height: 0.1;
                         // text-shadow: 4px 3px 8px rgba(0, 0, 0, 0.2);
                         text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
                         -webkit-font-smoothing: antialiased;
+                        grid-area: 1/1;
+                    }
+                    @media only screen and (max-width: 800px) {
+                        h1 {
+                            font-size: clamp(1rem, 12vw + 5rem, 11rem);
+                        }
+                    }
+                    @media only screen and (max-width: 600px) {
+                        h1 {
+                            font-size: clamp(1rem, 7vw + 5rem, 7rem);
+                        }
+                    }
+                    @media only screen and (max-width: 400px) {
+                        h1 {
+                            font-size: 4rem;
+                        }
                     }
                     .top {
                         color: #C4FFB2;
                     }
                     .ly1 {
-                        color: #B7E3CC;
+                        // @include letter(14px, -32px);
                         position: relative;
+                        color: #B7E3CC;
                         z-index: -1;
-                        // transform: translate(9px, -32px);
-                            transform: translate(14px, -32px);
                     }
                     .ly2 {
-                        color: #EB5160;
+                        // @include letter(29px, -64px);
                         position: relative;
+                        color: #EB5160;
                         z-index: -2;
-                        // transform: translate(18px, -65px);
-                        transform: translate(29px, -64px);
                     }
                     .ly3 {
-                        color: #7D82B8;
+                        // @include letter(44px, -96px);
                         position: relative;
+                        color: #7D82B8;
                         z-index: -3;
-                        // transform: translate(27px, -97px);
-                            transform: translate(44px, -96px);
                     }
                     .ly4 {
-                        color: #7B4B94;
+                        // @include letter(56px, -128px);
                         position: relative;
+                        color: #7B4B94;
                         z-index: -4;
-                        // transform: translate(36px, -129px);
-                            transform: translate(56px, -128px);
                     }
                     .bottom {
-                        color: rgba(0, 0, 0, 0.1);
+                        // @include letter(70px, -160px);
                         position: relative;
+                        color: rgba(0, 0, 0, 0.1);
                         z-index: -5;
-                        // transform: translate(45px, -162px);
-                            transform: translate(70px, -160px);
                         text-shadow: none;
                     }
                 }
+                
             }
         }
     }
 }
+// @media only screen and (max-width: 800px) {
+//     body{
+//         #root {
+//             main {
+//                 padding: 1rem;
+//                 .letters {
+//                     h1 {
+//                         font-size: clamp(1rem, 12vw + 5rem, 11rem);
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

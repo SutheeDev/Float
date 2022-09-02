@@ -26,55 +26,89 @@ const Letter = (props) => {
     let bottom = useRef();
 
     useEffect(() => {
-        var tl = gsap.timeline();
-        tl.to(top, {
-            y: 120,
-            x: -21,
-            duration: 1.3,
-            repeat: -1,
-            yoyo: true,
-            ease: "power2.inOut"
-        })
-        tl.to(ly1, {
-            y: 89,
-            x: -6,
-            duration: 1.3,
-            repeat: -1,
-            yoyo: true,
-            ease: "power2.inOut"
-        }, '<0.15')
-        tl.to(ly2, {
-            y: 58,
-            x: 12,
-            duration: 1.3,
-            repeat: -1,
-            yoyo: true,
-            ease: "power2.inOut"
-        }, '<0.15')
-        tl.to(ly3, {
-            y: 27,
-            x: 28,
-            duration: 1.3,
-            repeat: -1,
-            yoyo: true,
-            ease: "power2.inOut"
-        }, '<0.15')
-        tl.to(ly4, {
-            y: -4,
-            x: 43,
-            duration: 1.3,
-            repeat: -1,
-            yoyo: true,
-            ease: "power2.inOut"
-        }, '<0.15')
-        tl.to(bottom, {
-            y: -35,
-            x: 58,
-            duration: 1.3,
-            repeat: -1,
-            yoyo: true,
-            ease: "power2.inOut"
-        }, '<0.15')
+        const letterTimeline = (el) => {
+            var tl = gsap.timeline();
+            tl.to(el, {
+                y: 100,
+                x: -21,
+                duration: 1.6,
+                repeat: -1,
+                yoyo: true,
+                ease: "power2.inOut"
+            })
+        };
+        var topTl = gsap.timeline();
+        topTl.add(letterTimeline(top))
+
+        var ly1Tl = gsap.timeline();
+        ly1Tl.add(letterTimeline(ly1))
+
+        var ly2Tl = gsap.timeline();
+        ly2Tl.add(letterTimeline(ly2))
+
+        var ly3Tl = gsap.timeline();
+        ly3Tl.add(letterTimeline(ly3))
+
+        var ly4Tl = gsap.timeline();
+        ly4Tl.add(letterTimeline(ly4))
+
+        var bottomTl = gsap.timeline();
+        bottomTl.add(letterTimeline(bottom))
+        
+        var masterTl = gsap.timeline();
+        masterTl.add(topTl)
+                .add(ly1Tl, '<1')
+
+
+        // var tl = gsap.timeline();
+        // tl.to(top, {
+        //     y: 100,
+        //     x: -21,
+        //     duration: 1.6,
+        //     repeat: -1,
+        //     yoyo: true,
+        //     ease: "power2.inOut"
+        // })
+    //     tl.to(ly1, {
+    //         y: 69,
+    //         x: -6,
+    //         duration: 1.6,
+    //         repeat: -1,
+    //         yoyo: true,
+    //         ease: "power2.inOut"
+    //     }, '<0.15')
+    //     tl.to(ly2, {
+    //         y: 38,
+    //         x: 12,
+    //         duration: 1.6,
+    //         repeat: -1,
+    //         yoyo: true,
+    //         ease: "power2.inOut"
+    //     }, '<0.15')
+    //     tl.to(ly3, {
+    //         y: 7,
+    //         x: 28,
+    //         duration: 1.6,
+    //         repeat: -1,
+    //         yoyo: true,
+    //         ease: "power2.inOut"
+    //     }, '<0.15')
+    //     tl.to(ly4, {
+    //         y: -24,
+    //         x: 43,
+    //         duration: 1.6,
+    //         repeat: -1,
+    //         yoyo: true,
+    //         ease: "power2.inOut"
+    //     }, '<0.15')
+    //     tl.to(bottom, {
+    //         y: -55,
+    //         x: 58,
+    //         duration: 1.6,
+    //         repeat: -1,
+    //         yoyo: true,
+    //         ease: "power2.inOut"
+    //     }, '<0.15')
     }, []);
 
     return (
