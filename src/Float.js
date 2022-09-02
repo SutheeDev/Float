@@ -1,7 +1,23 @@
 import React, {useEffect, useRef} from 'react'
 import { gsap } from "gsap";
 
-const Float = () => {
+function Float (){
+    return (
+        <>
+        <main className='noise'>
+            <article className='letters'>
+                <Letter letter='f'/>
+                <Letter letter='l'/>
+                <Letter letter='o'/>
+                <Letter letter='a'/>
+                <Letter letter='t'/>
+            </article>
+        </main>
+        </>
+    )
+};
+
+const Letter = (props) => {
     let top = useRef();
     let ly1 = useRef();
     let ly2 = useRef();
@@ -62,29 +78,16 @@ const Float = () => {
     }, []);
 
     return (
-        <>
-        <main className='noise'>
-            <article className='letters'>
-                <section className="letter">
-                    <h1 ref={el => {top = el}} className='top'>f</h1>
-                    <h1 ref={el => {ly1 = el}} className='ly1'>f</h1>
-                    <h1 ref={el => {ly2 = el}} className='ly2'>f</h1>
-                    <h1 ref={el => {ly3 = el}} className='ly3'>f</h1>
-                    <h1 ref={el => {ly4 = el}} className='ly4'>f</h1>
-                    <h1 ref={el => {bottom = el}} className='bottom'>f</h1>
-                </section>
-                {/* <section className="letter">
-                    <h1 className='top'>l</h1>
-                    <h1 className='ly1'>l</h1>
-                    <h1 className='ly2'>l</h1>
-                    <h1 className='ly3'>l</h1>
-                    <h1 className='ly4'>l</h1>
-                    <h1 className='bottom'>l</h1>
-                </section>  */}
-            </article>
-        </main>
-        </>
+    <section className="letter">
+        <h1 ref={el => {top = el}} className='top'>{props.letter}</h1>
+        <h1 ref={el => {ly1 = el}} className='ly1'>{props.letter}</h1>
+        <h1 ref={el => {ly2 = el}} className='ly2'>{props.letter}</h1>
+        <h1 ref={el => {ly3 = el}} className='ly3'>{props.letter}</h1>
+        <h1 ref={el => {ly4 = el}} className='ly4'>{props.letter}</h1>
+        <h1 ref={el => {bottom = el}} className='bottom'>{props.letter}</h1>
+    </section>
     )
 };
+
 
 export default Float
