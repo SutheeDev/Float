@@ -36,7 +36,8 @@ body #root main .letters .letter h1 {
   text-transform: uppercase;
   font-size: 20rem;
   line-height: 0.1;
-  text-shadow: 4px 3px 8px rgba(0, 0, 0, 0.2);
+  text-shadow: #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+  -webkit-font-smoothing: antialiased;
 }
 body #root main .letters .letter .top {
   color: #C4FFB2;
@@ -45,30 +46,30 @@ body #root main .letters .letter .ly1 {
   color: #B7E3CC;
   position: relative;
   z-index: -1;
-  transform: translate(9px, -8px);
+  transform: translate(14px, -32px);
 }
 body #root main .letters .letter .ly2 {
   color: #EB5160;
   position: relative;
   z-index: -2;
-  transform: translate(18px, -16px);
+  transform: translate(29px, -64px);
 }
 body #root main .letters .letter .ly3 {
   color: #7D82B8;
   position: relative;
   z-index: -3;
-  transform: translate(27px, -24px);
+  transform: translate(44px, -96px);
 }
 body #root main .letters .letter .ly4 {
   color: #7B4B94;
   position: relative;
   z-index: -4;
-  transform: translate(36px, -32px);
+  transform: translate(56px, -128px);
 }
 body #root main .letters .letter .bottom {
   color: rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: -5;
-  transform: translate(45px, -40px);
+  transform: translate(70px, -160px);
   text-shadow: none;
 }/*# sourceMappingURL=index.css.map */
