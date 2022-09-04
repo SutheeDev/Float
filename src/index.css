@@ -25,6 +25,37 @@ body #root main {
   position: relative;
   z-index: -10;
 }
+body #root main .circle1 {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 290px;
+  left: 140px;
+  z-index: 20;
+  filter: blur(25px);
+}
+body #root main .circle2 {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+}
+body #root main .circle3 {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+}
 body #root main .letters {
   min-height: 7rem;
   width: 100vw;
