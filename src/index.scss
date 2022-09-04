@@ -98,26 +98,26 @@ body {
                         }
                     }
                     .top {
-                        color: #C4FFB2;
+                        color: #fff;
                     }
                     .ly1 {
                         @include letter(14px);
-                        color: #B7E3CC;
+                        color: #9DF7E5;
                         z-index: -1;
                     }
                     .ly2 {
                         @include letter(28px);
-                        color: #EB5160;
+                        color: #F4E4BA;
                         z-index: -2;
                     }
                     .ly3 {
                         @include letter(42px);
-                        color: #7D82B8;
+                        color: #E5A9A9;
                         z-index: -3;
                     }
                     .ly4 {
                         @include letter(56px);
-                        color: #7B4B94;
+                        color: #AF4D98;
                         z-index: -4;
                     }
                     .bottom {

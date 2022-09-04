@@ -99,30 +99,30 @@ body #root main .letters .letter h1 {
   }
 }
 body #root main .letters .letter .top {
-  color: #C4FFB2;
+  color: #fff;
 }
 body #root main .letters .letter .ly1 {
   position: relative;
   transform: translateX(14px);
-  color: #B7E3CC;
+  color: #9DF7E5;
   z-index: -1;
 }
 body #root main .letters .letter .ly2 {
   position: relative;
   transform: translateX(28px);
-  color: #EB5160;
+  color: #F4E4BA;
   z-index: -2;
 }
 body #root main .letters .letter .ly3 {
   position: relative;
   transform: translateX(42px);
-  color: #7D82B8;
+  color: #E5A9A9;
   z-index: -3;
 }
 body #root main .letters .letter .ly4 {
   position: relative;
   transform: translateX(56px);
-  color: #7B4B94;
+  color: #AF4D98;
   z-index: -4;
 }
 body #root main .letters .letter .bottom {
