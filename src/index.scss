@@ -7,10 +7,14 @@
     position: relative;
     transform: translateX($x)
 }
-// @mixin star{
-//     position: relative;
-//     z-index: 10;
-// }
+@mixin circle($width-height) {
+    width: $width-height;
+    height: $width-height;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 20;
+    background-color: rgb(255, 255, 255);
+}
 body {
     width: 100vw;
     height: 100vh;
@@ -36,50 +40,26 @@ body {
                 position: relative;
                 z-index: -10;
             .circle1 {
-                width: 70px;
-                height: 70px;
-                border-radius: 50%;
-                background-color: rgb(255, 255, 255);
-                position: absolute;
+                @include circle(70px);
                 bottom: 290px;
-                left: 140px;
-                z-index: 20;
+                left: 13%;
                 filter: blur(25px);
             }
             .circle2 {
-                width: 70px;
-                height: 70px;
-                border-radius: 50%;
-                background-color: rgb(255, 255, 255);
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                z-index: 20;
-                // filter: blur(25px);
+                @include circle(45px);
+                top: 50%;
+                right: 50%;
+                transform: translate(-80px, -170px);
+                filter: blur(25px);
+                z-index: 0;
             }
             .circle3 {
-                width: 70px;
-                height: 70px;
-                border-radius: 50%;
-                background-color: rgb(255, 255, 255);
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                z-index: 20;
-                // filter: blur(25px);
+                @include circle(70px);
+                // top: 48%;
+                top: 480px;
+                right: 13%;
+                filter: blur(35px);
             }
-            // .star {
-            //     position: absolute;
-            //     width: 70%;
-            //     height: 25%;
-            //     left: 50px;
-            //     .star1 {
-            //         @include star;
-            //     }
-            //     .star2 {
-            //         @include star;
-            //     }
-            // }
             .letters {
                 min-height: 7rem;
                 width: 100vw;

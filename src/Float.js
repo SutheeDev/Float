@@ -21,33 +21,18 @@ function Float (){
     )
 };
 
-// const Star = () => {
-//     let star = useRef();
-
-//     return (
-//         <div ref={el => {star = el}} className="star">
-//             <div className="star1">
-//                 <svg width="50" height="63" xmlns="http://www.w3.org/2000/svg"><path d="M50 31.57c-25.182 0-25.182 0-25.182 31.021 0-31.022 0-31.022-24.818-31.022 24.818 0 24.818 0 24.818-31.569 0 31.57 0 31.57 25.182 31.57Z" fill="#FFF" fill-rule="nonzero" stroke="#000" stroke-width=".7"/></svg>
-//             </div>
-//             <div className="star2">
-//                 <svg width="50" height="63" xmlns="http://www.w3.org/2000/svg"><path d="M50 31.57c-25.182 0-25.182 0-25.182 31.021 0-31.022 0-31.022-24.818-31.022 24.818 0 24.818 0 24.818-31.569 0 31.57 0 31.57 25.182 31.57Z" fill="#FFF" fill-rule="nonzero" stroke="#000" stroke-width=".7"/></svg>
-//             </div>
-//         </div>
-//     )
-// }
-
 const Circle1 = () => {
     let circle1 = useRef();
 
-    useEffect(() => {
-        var circle1Tl = gsap.timeline({repeat: -1, yoyo: true});
-        circle1Tl
-        .to(circle1, {
-            y: -50,
-            duration: 2,
-            ease: 'linear'
-        })
-    }, []);
+    // useEffect(() => {
+    //     var circle1Tl = gsap.timeline({repeat: -1, yoyo: true});
+    //     circle1Tl
+    //     .to(circle1, {
+    //         y: -50,
+    //         duration: 2,
+    //         ease: 'linear'
+    //     })
+    // }, []);
 
     return (
         <div ref={el => {circle1 = el}} className='circle1'></div>
@@ -61,8 +46,20 @@ const Circle2 = () => {
 };
 
 const Circle3 = () => {
+    let circle3 = useRef();
+
+    useEffect(() => {
+        var circle3Tl = gsap.timeline({repeat: -1, yoyo: true});
+        circle3Tl
+        .to(circle3, {
+            y: 50,
+            duration: 2,
+            ease: 'linear'
+        })
+    }, []);
+
     return (
-        <div className='circle3'></div>
+        <div ref={el => {circle3 = el}} className='circle3'></div>
     )
 };
 
@@ -134,6 +131,5 @@ const Letter = (props) => {
     </section>
     )
 };
-
 
 export default Float

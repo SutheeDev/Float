@@ -28,33 +28,37 @@ body #root main {
 body #root main .circle1 {
   width: 70px;
   height: 70px;
-  border-radius: 50%;
-  background-color: rgb(255, 255, 255);
   position: absolute;
-  bottom: 290px;
-  left: 140px;
+  border-radius: 50%;
   z-index: 20;
+  background-color: rgb(255, 255, 255);
+  bottom: 290px;
+  left: 13%;
   filter: blur(25px);
 }
 body #root main .circle2 {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background-color: rgb(255, 255, 255);
+  width: 45px;
+  height: 45px;
   position: absolute;
-  bottom: 0;
-  left: 0;
+  border-radius: 50%;
   z-index: 20;
+  background-color: rgb(255, 255, 255);
+  top: 50%;
+  right: 50%;
+  transform: translate(-80px, -170px);
+  filter: blur(25px);
+  z-index: 0;
 }
 body #root main .circle3 {
   width: 70px;
   height: 70px;
-  border-radius: 50%;
-  background-color: rgb(255, 255, 255);
   position: absolute;
-  bottom: 0;
-  left: 0;
+  border-radius: 50%;
   z-index: 20;
+  background-color: rgb(255, 255, 255);
+  top: 480px;
+  right: 13%;
+  filter: blur(35px);
 }
 body #root main .letters {
   min-height: 7rem;
