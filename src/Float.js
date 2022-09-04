@@ -124,11 +124,11 @@ const Letters = (prop) => {
     return (
         <>
             <article className='letters'>
-                <Letter letter='f' delay='0'/>
-                <Letter letter='l'delay='0.3'/>
-                <Letter letter='o'delay='0.3'/>
-                <Letter letter='a'delay='0.3'/>
-                <Letter letter='t'delay='0.3'/>
+                <Letter letter='f'/>
+                <Letter letter='l'/>
+                <Letter letter='o'/>
+                <Letter letter='a'/>
+                <Letter letter='t'/>
             </article>
         </>
     )
