@@ -8,13 +8,14 @@ function Float (){
             <Circle1/>
             <Circle2/>
             <Circle3/>
-            <article className='letters'>
+            <Letters/>
+            {/* <article className='letters'>
                 <Letter letter='f'/>
                 <Letter letter='l'/>
                 <Letter letter='o'/>
                 <Letter letter='a'/>
                 <Letter letter='t'/>
-            </article>
+            </article> */}
         </main>
         </>
     )
@@ -110,8 +111,8 @@ const Letter = (props) => {
             bottomTl.add(letterTimeline(bottom))
         }
         
-        var masterTl = gsap.timeline();
-        masterTl.add(topTl)
+        var lettersTl = gsap.timeline();
+        lettersTl.add(topTl)
                 .add(ly1Tl, '<0.2')
                 .add(ly2Tl, '<0.2')
                 .add(ly3Tl, '<0.2')
@@ -130,5 +131,27 @@ const Letter = (props) => {
     </section>
     )
 };
+
+const Letters = (prop) => {
+    let f = useRef();
+    let l = useRef();
+    let o = useRef();
+    let a = useRef();
+    let t = useRef();
+
+    var masterTl = gsap.timeline();
+
+    return (
+        <>
+            <article className='letters'>
+                <Letter ref={el => {f = el}} letter='f' delay='0'/>
+                <Letter ref={el => {l = el}} letter='l'delay='0.3'/>
+                <Letter ref={el => {o = el}} letter='o'delay='0.3'/>
+                <Letter ref={el => {a = el}} letter='a'delay='0.3'/>
+                <Letter ref={el => {t = el}} letter='t'delay='0.3'/>
+            </article>
+        </>
+    )
+}
 
 export default Float
