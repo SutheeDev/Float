@@ -5,7 +5,6 @@ function Float (){
     return (
         <>
         <main className='noise'>
-            {/* <Star/> */}
             <Circle1/>
             <Circle2/>
             <Circle3/>
@@ -24,15 +23,15 @@ function Float (){
 const Circle1 = () => {
     let circle1 = useRef();
 
-    // useEffect(() => {
-    //     var circle1Tl = gsap.timeline({repeat: -1, yoyo: true});
-    //     circle1Tl
-    //     .to(circle1, {
-    //         y: -50,
-    //         duration: 2,
-    //         ease: 'linear'
-    //     })
-    // }, []);
+    useEffect(() => {
+        var circle1Tl = gsap.timeline({repeat: -1, yoyo: true});
+        circle1Tl
+        .to(circle1, {
+            y: -50,
+            duration: 2,
+            ease: 'linear'
+        })
+    }, []);
 
     return (
         <div ref={el => {circle1 = el}} className='circle1'></div>
@@ -76,7 +75,7 @@ const Letter = (props) => {
             var tl = gsap.timeline();
             tl.to(el, {
                 y: 100,
-                duration: 1.6,
+                duration: 1.4,
                 repeat: -1,
                 yoyo: true,
                 ease: "power2.inOut"

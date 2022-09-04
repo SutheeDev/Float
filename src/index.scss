@@ -102,37 +102,31 @@ body {
                     }
                     .ly1 {
                         @include letter(14px);
-                        // position: relative;
                         color: #B7E3CC;
                         z-index: -1;
                     }
                     .ly2 {
                         @include letter(28px);
-                        // position: relative;
                         color: #EB5160;
                         z-index: -2;
                     }
                     .ly3 {
                         @include letter(42px);
-                        // position: relative;
                         color: #7D82B8;
                         z-index: -3;
                     }
                     .ly4 {
                         @include letter(56px);
-                        // position: relative;
                         color: #7B4B94;
                         z-index: -4;
                     }
                     .bottom {
                         @include letter(70px);
-                        // position: relative;
                         color: rgba(0, 0, 0, 0.1);
                         z-index: -5;
                         text-shadow: none;
                     }
                 }
-                
             }
         }
     }
