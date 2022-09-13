@@ -9,9 +9,10 @@ This small project belongs to the ActivelyInactive series, in which I've tried t
 ## Technologies
 
 - React
-- SCSS
+- CSS3 / SCSS
+- JavaScript ES6
 - JSX
-- GSAP
+- GSAP3
 
 ## Acknowledgements
 
